@@ -1,0 +1,57 @@
+body {
+    background-image: url(https://pixarplanet.com/blog/wp-content/uploads/2016/12/10-Tepui-by-Lou-Romano-21.5X39.jpg);
+    background-size: 100%;
+}
+#counter {
+    display: none;
+    margin-top: -20px;
+}
+#head {
+    background-color: rgba(239,206,153,0.5);
+    padding-bottom: 20px;
+}
+#title {
+    font-size: 100px;
+}
+#body {
+    display: ;
+    background-color: rgba(173,102,122,0.5);
+    padding-bottom: 20px;
+}
+#counter {
+    font-size: 40px;
+}
+.guestion-title {
+    font-size: 50px;
+    margin: 10px;
+}
+.inputs {
+    margin: 10px;
+}
+#year-founded-correct {
+    display: none;
+}
+#first-film {
+    display: none;
+}
+@media screen and (max-width:450px){
+    body {
+        background-size: auto;
+        background-position-x: -140px;
+    }
+    #counter {
+        margin-top: -10px;
+    }
+    #head {
+        padding-top: 10px;
+    }
+    #title {
+        font-size: 50px;
+    }
+    #counter {
+        font-size: 20px;
+    }
+    .guestion-title {
+        font-size: 35px;
+    }
+}
