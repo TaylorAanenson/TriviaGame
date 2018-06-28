@@ -11,31 +11,274 @@
 <body>
 <div id="head" class="container">
     <h1 id="title" class="text-center">Pixar Trivia!</h1>
-    <button id="start" type="button" class="btn btn-warning btn-lg btn-block">START</button>
+    <button id="start" class="btn btn-warning btn-lg btn-block" onclick="startGame()">START</button>
     <div id="counter" class="text-center">Time remaining: <span id="timer"></span> seconds</div>
+    <p id="correct-answer" class="text-center"></p>
 </div>
 <div id="body" class="container">
     <div id="year-founded" class="text-center">
-        <p class="guestion-title">What year was pixar founded?</p>
-        <form name="year-founded" action="" onclick="yearFounded()">
-            <input type="radio" name="year-founded" value="1993" class="btn btn-info btn-lg btn-block">1993
-            <input type="radio" name="year-founded" value="1990" class="btn btn-info btn-lg btn-block">1990
-            <input type="radio" name="year-founded" value="1986" class="btn btn-info btn-lg btn-block">1986
-            <input type="radio" name="year-founded" value="1989" class="btn btn-info btn-lg btn-block">1989
+        <p class="guestion-title">What year was Pixar founded?</p>
+        <form name="year-founded" class="btn-group-vertical btn-group-toggle btn-block" onclick="yearFounded()">
+            <label class="btn btn-info">
+            <input type="radio" name="year-founded" value="1993">1993</input>
+            </label>
+            <label class="btn btn-info">
+            <input type="radio" name="year-founded" value="1990">1990</input>
+            </label>
+            <label class="btn btn-info">
+            <input type="radio" name="year-founded" value="1986">1986</input>
+            </label>
+            <label class="btn btn-info">
+            <input type="radio" name="year-founded" value="1989">1989</input>
+            </label>
         </form>
     </div>
     <div id="year-founded-correct" class="text-center">
-            <p class="guestion-title">Correct!</p>
+        <div class="embed-responsive embed-responsive-16by9">
+                <iframe src="https://giphy.com/embed/12d19apJyRsmA"></iframe>
+        </div>
+    </div>
+    <div id="year-founded-incorrect" class="text-center">
+        <div class="embed-responsive embed-responsive-16by9">
+                <iframe src="https://giphy.com/embed/N7vysOmYh5sru"></iframe>
+        </div>
+    </div>
+    <div id="year-founded-out" class="text-center">
+        <div class="embed-responsive embed-responsive-16by9">
+                <iframe src="https://giphy.com/embed/pZe25TFFVxPW0"></iframe>
+        </div>
     </div>
     <div id="first-film" class="text-center">
-            <p class="guestion-title">What was pixar's first film?</p>
-            <form name="first-film" action="" onclick="firstFilm()">
-                <input type="radio" value="a-bugs-life" name="first-film"><span class="inputs">A Bugs Life</span>
-                <input type="radio" value="monsters-inc" name="first-film"><span class="inputs">Monsters, Inc.</span>
-                <input type="radio" value="toy-story" name="first-film"><span class="inputs">Toy Story</span>
-                <input type="radio" value="finding-nemo" name="first-film"><span class="inputs">Finding Nemo</span>
-            </form>
+        <p class="guestion-title">What was Pixar's first film?</p>
+        <form name="first-film" class="btn-group-vertical btn-group-toggle btn-block" onclick="firstFilm()">
+            <label class="btn btn-info">
+            <input type="radio" name="first-film" value="a-bugs-life">A Bug's Life</input>
+            </label>
+            <label class="btn btn-info">
+            <input type="radio" name="first-film" value="toy-story">Toy Story</input>
+            </label>
+            <label class="btn btn-info">
+            <input type="radio" name="first-film" value="monsters-inc">Monsters, Inc.</input>
+            </label>
+            <label class="btn btn-info">
+            <input type="radio" name="first-film" value="finding-nemo">Finding Nemo</input>
+            </label>
+        </form>
+    </div>
+    <div id="first-film-correct" class="text-center">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="https://giphy.com/embed/CBF74pQeKJRZK"></iframe>
         </div>
+    </div>
+    <div id="first-film-incorrect" class="text-center">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="https://giphy.com/embed/Cl1il4OjfN7dS"></iframe>
+        </div>
+    </div>
+    <div id="first-film-out" class="text-center">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="https://giphy.com/embed/XomHlvtIaDiNO"></iframe>
+        </div>
+    </div>
+    <div id="woodys-saying" class="text-center">
+        <p class="guestion-title">In Toy Story, what does Woody say when his string is pulled?</p>
+        <form name="woodys-saying" class="btn-group-vertical btn-group-toggle btn-block" onclick="woodysSaying()">
+            <label class="btn btn-info">
+            <input type="radio" name="woodys-saying" value="reach">Reach for the sky!</input>
+            </label>
+            <label class="btn btn-info">
+            <input type="radio" name="woodys-saying" value="deputy">You're my favorite deputy!</input>
+            </label>
+            <label class="btn btn-info">
+            <input type="radio" name="woodys-saying" value="town">This town ain't big enough for the two of us.</input>
+            </label>
+            <label class="btn btn-info">
+            <input type="radio" name="woodys-saying" value="snake">There's a snake in my boot!</input>
+            </label>
+        </form>
+    </div>
+    <div id="woodys-saying-correct" class="text-center">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="https://giphy.com/embed/xcymn33ucu4M0"></iframe>
+        </div>
+    </div>
+    <div id="woodys-saying-incorrect" class="text-center">
+        <div class="embed-responsive embed-responsive-16by9">   
+            <iframe src="https://giphy.com/embed/140ObFj9MRjRIc"></iframe>
+        </div>
+    </div>
+    <div id="woodys-saying-out" class="text-center">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="https://giphy.com/embed/cPRsE9gIKuATK"></iframe>
+        </div>
+    </div>
+    <div id="dug-breed" class="text-center">
+        <p class="guestion-title">What breed of dog is Dug in UP?</p>
+        <form name="dug-breed" class="btn-group-vertical btn-group-toggle btn-block" onclick="dugBreed()">
+            <label class="btn btn-info">
+            <input type="radio" name="dug-breed" value="doberman-pinscher">Doberman Pinscher</input>
+            </label>
+            <label class="btn btn-info">
+            <input type="radio" name="dug-breed" value="bulldog">Bulldog</input>
+            </label>
+            <label class="btn btn-info">
+            <input type="radio" name="dug-breed" value="golden-retriever">Golden Retriever</input>
+            </label>
+            <label class="btn btn-info">
+            <input type="radio" name="dug-breed" value="rottweiler">Rottweiler</input>
+            </label>
+        </form>
+    </div>
+    <div id="dug-breed-correct" class="text-center">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="https://giphy.com/embed/JMotSbZTCEWl2"></iframe>
+        </div>
+    </div>
+    <div id="dug-breed-incorrect" class="text-center">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="https://giphy.com/embed/5LONmJBzkVSOQ"></iframe>
+        </div>
+    </div>
+    <div id="dug-breed-out" class="text-center">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="https://giphy.com/embed/GiWEowj3nQv9C"></iframe>
+        </div>
+    </div>
+    <div id="kevin-food" class="text-center">
+        <p class="guestion-title">What does Russel feed Kevin in UP?</p>
+        <form name="kevin-food" class="btn-group-vertical btn-group-toggle btn-block" onclick="kevinFood()">
+            <label class="btn btn-info">
+            <input type="radio" name="kevin-food" value="crackers">Crackers</input>
+            </label>
+            <label class="btn btn-info">
+            <input type="radio" name="kevin-food" value="chocolate">Chocolate</input>
+            </label>
+            <label class="btn btn-info">
+            <input type="radio" name="kevin-food" value="granola">Granola</input>
+            </label>
+            <label class="btn btn-info">
+            <input type="radio" name="kevin-food" value="chips">Chips</input>
+            </label>
+        </form>
+    </div>
+    <div id="kevin-food-correct" class="text-center">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="https://giphy.com/embed/5a679NImmD3cA"></iframe>
+        </div>
+    </div>
+    <div id="kevin-food-incorrect" class="text-center">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="https://giphy.com/embed/hNU4HmhtpMPTO"></iframe>
+        </div>
+    </div>
+    <div id="kevin-food-out" class="text-center">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="https://giphy.com/embed/133l9lMseIxhfy"></iframe>
+        </div>
+    </div>
+    <div id="monsters-power" class="text-center">
+        <p class="guestion-title">What do they collect for power in Monsters, Inc.?</p>
+        <form name="monsters-power" class="btn-group-vertical btn-group-toggle btn-block" onclick="monstersPower()">
+            <label class="btn btn-info">
+            <input type="radio" name="monsters-power" value="laughs">Laughs</input>
+            </label>
+            <label class="btn btn-info">
+            <input type="radio" name="monsters-power" value="screams">Screams</input>
+            </label>
+            <label class="btn btn-info">
+            <input type="radio" name="monsters-power" value="crys">Crys</input>
+            </label>
+            <label class="btn btn-info">
+            <input type="radio" name="monsters-power" value="whispers">Whispers</input>
+            </label>
+        </form>
+    </div>
+    <div id="monsters-power-correct" class="text-center">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="https://giphy.com/embed/9rMvwuIpMBKU0"></iframe>
+        </div>
+    </div>
+    <div id="monsters-power-incorrect" class="text-center">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="https://giphy.com/embed/qavyMi4R92nrW"></iframe>
+        </div>
+    </div>
+    <div id="monsters-power-out" class="text-center">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="https://giphy.com/embed/zxxXYJqTlpBnO"></iframe>
+        </div>
+    </div>
+    <div id="bug-scare" class="text-center">
+        <p class="guestion-title">In A Bug’s Life, what does Flik construct to scare away the grasshoppers?</p>
+        <form name="bug-scare" class="btn-group-vertical btn-group-toggle btn-block" onclick="bugScare()">
+            <label class="btn btn-info">
+            <input type="radio" name="bug-scare" value="bird">A Bird</input>
+            </label>
+            <label class="btn btn-info">
+            <input type="radio" name="bug-scare" value="frog">A Frog</input>
+            </label>
+            <label class="btn btn-info">
+            <input type="radio" name="bug-scare" value="spider">A Spider</input>
+            </label>
+            <label class="btn btn-info">
+            <input type="radio" name="bug-scare" value="mouse">A Mouse</input>
+            </label>
+        </form>
+    </div>
+    <div id="bug-scare-correct" class="text-center">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="https://giphy.com/embed/iAiQ39SYXNcFW"></iframe>
+        </div>
+    </div>
+    <div id="bug-scare-incorrect" class="text-center">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="https://giphy.com/embed/pcE3t2pGFpwMo"></iframe>
+        </div>
+    </div>
+    <div id="bug-scare-out" class="text-center">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="https://giphy.com/embed/ggv9b86HNQXv2"></iframe>
+        </div>
+    </div>
+    <div id="nemo-gang" class="text-center">
+        <p class="guestion-title">Who is the leader of the Tank Gang in Finding Nemo?</p>
+        <form name="nemo-gang" class="btn-group-vertical btn-group-toggle btn-block" onclick="nemoGang()">
+            <label class="btn btn-info">
+            <input type="radio" name="nemo-gang" value="bloat">Bloat</input>
+            </label>
+            <label class="btn btn-info">
+            <input type="radio" name="nemo-gang" value="peach">Peach</input>
+            </label>
+            <label class="btn btn-info">
+            <input type="radio" name="nemo-gang" value="bubbles">Bubbles</input>
+            </label>
+            <label class="btn btn-info">
+            <input type="radio" name="nemo-gang" value="gill">Gill</input>
+            </label>
+        </form>
+    </div>
+    <div id="nemo-gang-correct" class="text-center">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="https://giphy.com/embed/KotyZzKmltF2U"></iframe>
+        </div>
+    </div>
+    <div id="nemo-gang-incorrect" class="text-center">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="https://giphy.com/embed/6Xp6wL7INzBzW"></iframe>
+        </div>
+    </div>
+    <div id="nemo-gang-out" class="text-center">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="https://giphy.com/embed/3G56BPhZW9IAw"></iframe>
+        </div>
+    </div>
+    <div id="end-game" class="text-center">
+        <p class="guestion-title">Here's how you did!</p>
+        <p id="correct"></p>
+        <p id="incorrect"></p>
+        <p id="unanswered"></p>
+        <button id="play-again" class="btn btn-warning btn-lg btn-block" onclick="tryAgain()">Play Again?</button>
+    </div>
 </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/app.js"></script>

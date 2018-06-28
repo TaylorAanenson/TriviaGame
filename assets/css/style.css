@@ -2,10 +2,6 @@ body {
     background-image: url(https://pixarplanet.com/blog/wp-content/uploads/2016/12/10-Tepui-by-Lou-Romano-21.5X39.jpg);
     background-size: 100%;
 }
-#counter {
-    display: none;
-    margin-top: -20px;
-}
 #head {
     background-color: rgba(239,206,153,0.5);
     padding-bottom: 20px;
@@ -13,25 +9,38 @@ body {
 #title {
     font-size: 100px;
 }
+#start, #play-again {
+    font-size: 40px;
+}
+#counter {
+    display: none;
+    font-size: 40px;
+    margin-top: -20px;
+}
+#correct-answer {
+    display: none;
+    font-size: 40px;
+    margin-top: -20px;
+    margin-bottom: -10px;
+}
 #body {
-    display: ;
+    display: none;
     background-color: rgba(173,102,122,0.5);
     padding-bottom: 20px;
 }
-#counter {
-    font-size: 40px;
-}
-.guestion-title {
+.guestion-title, #correct, #incorrect, #unanswered {
     font-size: 50px;
     margin: 10px;
 }
-.inputs {
-    margin: 10px;
+.btn.btn-info {
+    font-size: 45px;
+    margin: 10px 0px;
 }
-#year-founded-correct {
-    display: none;
+.embed-responsive {
+    width: 90%;
+    margin: auto;
 }
-#first-film {
+#year-founded, #year-founded-correct, #year-founded-incorrect, #year-founded-out, #first-film, #first-film-correct, #first-film-incorrect, #first-film-out, #woodys-saying, #woodys-saying-correct, #woodys-saying-incorrect, #woodys-saying-out, #dug-breed, #dug-breed-correct, #dug-breed-incorrect, #dug-breed-out, #kevin-food, #kevin-food-correct, #kevin-food-incorrect, #kevin-food-out, #monsters-power, #monsters-power-correct, #monsters-power-incorrect, #monsters-power-out, #bug-scare, #bug-scare-correct, #bug-scare-incorrect, #bug-scare-out, #nemo-gang, #nemo-gang-correct, #nemo-gang-incorrect, #nemo-gang-out, #end-game {
     display: none;
 }
 @media screen and (max-width:450px){
@@ -39,19 +48,23 @@ body {
         background-size: auto;
         background-position-x: -140px;
     }
-    #counter {
-        margin-top: -10px;
-    }
     #head {
         padding-top: 10px;
     }
     #title {
         font-size: 50px;
     }
+    #start, #play-again {
+        font-size: 20px;
+    }
     #counter {
         font-size: 20px;
+        margin-top: -10px;
     }
     .guestion-title {
         font-size: 35px;
+    }
+    .btn.btn-info {
+        font-size: 30px;
     }
 }
