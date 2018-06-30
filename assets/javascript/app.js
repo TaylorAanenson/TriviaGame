@@ -1,22 +1,26 @@
+// Game music
+var gameMusic = $('#game-music')[0];
+
 // Start game
 function startGame(){
+    gameMusic.play();
     $('#start').hide();
     $('#counter').show();
     $('#body').show();
     $('#year-founded').show();
-    gameTimer = setInterval(yearFoundedTimer, 1000);
+    timer = setInterval(yearFoundedTimer, 1000);
 }
 
 // Question timers
 var seconds = 15;
-var gameTimer;
+var timer;
 $('#timer').text(seconds)
 
 function yearFoundedTimer(){
     seconds--;
     $('#timer').text(seconds)
     if (seconds == 0){
-        clearInterval(gameTimer);
+        clearInterval(timer);
         yearFounded();
     }
 }
@@ -25,7 +29,7 @@ function firstFilmTimer(){
     seconds--;
     $('#timer').text(seconds)
     if (seconds == 0){
-        clearInterval(gameTimer);
+        clearInterval(timer);
         firstFilm();
     }
 }
@@ -34,7 +38,7 @@ function woodysSayingTimer(){
     seconds--;
     $('#timer').text(seconds)
     if (seconds == 0){
-        clearInterval(gameTimer);
+        clearInterval(timer);
         woodysSaying();
     }
 }
@@ -43,7 +47,7 @@ function dugBreedTimer(){
     seconds--;
     $('#timer').text(seconds)
     if (seconds == 0){
-        clearInterval(gameTimer);
+        clearInterval(timer);
         dugBreed();
     }
 }
@@ -52,7 +56,7 @@ function kevinFoodTimer(){
     seconds--;
     $('#timer').text(seconds)
     if (seconds == 0){
-        clearInterval(gameTimer);
+        clearInterval(timer);
         kevinFood();
     }
 }
@@ -61,7 +65,7 @@ function monstersPowerTimer(){
     seconds--;
     $('#timer').text(seconds)
     if (seconds == 0){
-        clearInterval(gameTimer);
+        clearInterval(timer);
         monstersPower();
     }
 }
@@ -70,7 +74,7 @@ function bugScareTimer(){
     seconds--;
     $('#timer').text(seconds)
     if (seconds == 0){
-        clearInterval(gameTimer);
+        clearInterval(timer);
         bugScare();
     }
 }
@@ -79,19 +83,18 @@ function nemoGangTimer(){
     seconds--;
     $('#timer').text(seconds)
     if (seconds == 0){
-        clearInterval(gameTimer);
+        clearInterval(timer);
         nemoGang();
     }
 }
 
 // After question timers
 var afterQuestionSeconds = 5;
-var afterQuestionTimer;
 
 function afterYearFoundedTimer(){
     afterQuestionSeconds--;
     if (afterQuestionSeconds == 0){
-        clearInterval(afterQuestionTimer);
+        clearInterval(timer);
         seconds = 15;
         $('#timer').text(seconds);
         afterQuestionSeconds = 5;
@@ -102,14 +105,14 @@ function afterYearFoundedTimer(){
         $('#title').text('Pixar Trivia!');
         $('#counter').show();
         $('#first-film').show();
-        gameTimer = setInterval(firstFilmTimer, 1000);
+        timer = setInterval(firstFilmTimer, 1000);
     }
 }
 
 function afterFirstFilmTimer(){
     afterQuestionSeconds--;
     if (afterQuestionSeconds == 0){
-        clearInterval(afterQuestionTimer);
+        clearInterval(timer);
         seconds = 15;
         $('#timer').text(seconds);
         afterQuestionSeconds = 5;
@@ -120,14 +123,14 @@ function afterFirstFilmTimer(){
         $('#title').text('Pixar Trivia!');
         $('#counter').show();
         $('#woodys-saying').show();
-        gameTimer = setInterval(woodysSayingTimer, 1000);
+        timer = setInterval(woodysSayingTimer, 1000);
     }
 }
 
 function afterWoodysSayingTimer(){
     afterQuestionSeconds--;
     if (afterQuestionSeconds == 0){
-        clearInterval(afterQuestionTimer);
+        clearInterval(timer);
         seconds = 15;
         $('#timer').text(seconds);
         afterQuestionSeconds = 5;
@@ -138,14 +141,14 @@ function afterWoodysSayingTimer(){
         $('#title').text('Pixar Trivia!');
         $('#counter').show();
         $('#dug-breed').show();
-        gameTimer = setInterval(dugBreedTimer, 1000);
+        timer = setInterval(dugBreedTimer, 1000);
     }
 }
 
 function afterDugBreedTimer(){
     afterQuestionSeconds--;
     if (afterQuestionSeconds == 0){
-        clearInterval(afterQuestionTimer);
+        clearInterval(timer);
         seconds = 15;
         $('#timer').text(seconds);
         afterQuestionSeconds = 5;
@@ -156,14 +159,14 @@ function afterDugBreedTimer(){
         $('#title').text('Pixar Trivia!');
         $('#counter').show();
         $('#kevin-food').show();
-        gameTimer = setInterval(kevinFoodTimer, 1000);
+        timer = setInterval(kevinFoodTimer, 1000);
     }
 }
 
 function afterKevinFoodTimer(){
     afterQuestionSeconds--;
     if (afterQuestionSeconds == 0){
-        clearInterval(afterQuestionTimer);
+        clearInterval(timer);
         seconds = 15;
         $('#timer').text(seconds);
         afterQuestionSeconds = 5;
@@ -174,14 +177,14 @@ function afterKevinFoodTimer(){
         $('#title').text('Pixar Trivia!');
         $('#counter').show();
         $('#monsters-power').show();
-        gameTimer = setInterval(monstersPowerTimer, 1000);
+        timer = setInterval(monstersPowerTimer, 1000);
     }
 }
 
 function afterMonstersPowerTimer(){
     afterQuestionSeconds--;
     if (afterQuestionSeconds == 0){
-        clearInterval(afterQuestionTimer);
+        clearInterval(timer);
         seconds = 15;
         $('#timer').text(seconds);
         afterQuestionSeconds = 5;
@@ -192,14 +195,14 @@ function afterMonstersPowerTimer(){
         $('#title').text('Pixar Trivia!');
         $('#counter').show();
         $('#bug-scare').show();
-        gameTimer = setInterval(bugScareTimer, 1000);
+        timer = setInterval(bugScareTimer, 1000);
     }
 }
 
 function afterBugScareTimer(){
     afterQuestionSeconds--;
     if (afterQuestionSeconds == 0){
-        clearInterval(afterQuestionTimer);
+        clearInterval(timer);
         seconds = 15;
         $('#timer').text(seconds);
         afterQuestionSeconds = 5;
@@ -210,14 +213,14 @@ function afterBugScareTimer(){
         $('#title').text('Pixar Trivia!');
         $('#counter').show();
         $('#nemo-gang').show();
-        gameTimer = setInterval(nemoGangTimer, 1000);
+        timer = setInterval(nemoGangTimer, 1000);
     }
 }
 
 function afterNemoGangTimer(){
     afterQuestionSeconds--;
     if (afterQuestionSeconds == 0){
-        clearInterval(afterQuestionTimer);
+        clearInterval(timer);
         seconds = 15;
         $('#timer').text(seconds);
         afterQuestionSeconds = 5;
@@ -244,9 +247,9 @@ function yearFounded(){
         $('#counter').hide();
         $('#year-founded').hide();
         $('#year-founded-correct').show();
-        clearInterval(gameTimer);
+        clearInterval(timer);
         correct++;
-        afterQuestionTimer = setInterval(afterYearFoundedTimer, 1000);
+        timer = setInterval(afterYearFoundedTimer, 1000);
     }else if (answer == '1993'||answer == '1990'||answer == '1989'){
         $('#title').text('Nope!');
         $('#counter').hide();
@@ -254,9 +257,9 @@ function yearFounded(){
         $('#correct-answer').show();
         $('#year-founded').hide();
         $('#year-founded-incorrect').show();
-        clearInterval(gameTimer);
+        clearInterval(timer);
         incorrect++;
-        afterQuestionTimer = setInterval(afterYearFoundedTimer, 1000);
+        timer = setInterval(afterYearFoundedTimer, 1000);
     }else if (seconds == 0){
         $('#title').text('Out of time!');
         $('#counter').hide();
@@ -264,9 +267,9 @@ function yearFounded(){
         $('#correct-answer').show();
         $('#year-founded').hide();
         $('#year-founded-out').show();
-        clearInterval(gameTimer);
+        clearInterval(timer);
         unanswered++;
-        afterQuestionTimer = setInterval(afterYearFoundedTimer, 1000);
+        timer = setInterval(afterYearFoundedTimer, 1000);
     }
 }
 
@@ -277,9 +280,9 @@ function firstFilm(){
         $('#counter').hide();
         $('#first-film').hide();
         $('#first-film-correct').show();
-        clearInterval(gameTimer);
+        clearInterval(timer);
         correct++;
-        afterQuestionTimer = setInterval(afterFirstFilmTimer, 1000);
+        timer = setInterval(afterFirstFilmTimer, 1000);
     }else if (answer == 'a-bugs-life'||answer == 'monsters-inc'||answer == 'finding-nemo'){
         $('#title').text('Nope!');
         $('#counter').hide();
@@ -287,9 +290,9 @@ function firstFilm(){
         $('#correct-answer').show();
         $('#first-film').hide();
         $('#first-film-incorrect').show();
-        clearInterval(gameTimer);
+        clearInterval(timer);
         incorrect++;
-        afterQuestionTimer = setInterval(afterFirstFilmTimer, 1000);
+        timer = setInterval(afterFirstFilmTimer, 1000);
     }else if (seconds == 0){
         $('#title').text('Out of time!');
         $('#counter').hide();
@@ -297,9 +300,9 @@ function firstFilm(){
         $('#correct-answer').show();
         $('#first-film').hide();
         $('#first-film-out').show();
-        clearInterval(gameTimer);
+        clearInterval(timer);
         unanswered++;
-        afterQuestionTimer = setInterval(afterFirstFilmTimer, 1000);
+        timer = setInterval(afterFirstFilmTimer, 1000);
     }
 }
 
@@ -310,29 +313,29 @@ function woodysSaying(){
         $('#counter').hide();
         $('#woodys-saying').hide();
         $('#woodys-saying-correct').show();
-        clearInterval(gameTimer);
+        clearInterval(timer);
         correct++;
-        afterQuestionTimer = setInterval(afterWoodysSayingTimer, 1000);
+        timer = setInterval(afterWoodysSayingTimer, 1000);
     }else if (answer == 'reach'||answer == 'deputy'||answer == 'town'){
         $('#title').text('Nope!');
         $('#counter').hide();
-        $('#correct-answer').text('The correct answer was Andy');
+        $('#correct-answer').text('The correct answer was There\'s a snake in my boot!');
         $('#correct-answer').show();
         $('#woodys-saying').hide();
         $('#woodys-saying-incorrect').show();
-        clearInterval(gameTimer);
+        clearInterval(timer);
         incorrect++;
-        afterQuestionTimer = setInterval(afterWoodysSayingTimer, 1000);
+        timer = setInterval(afterWoodysSayingTimer, 1000);
     }else if (seconds == 0){
         $('#title').text('Out of time!');
         $('#counter').hide();
-        $('#correct-answer').text('The correct answer was Andy');
+        $('#correct-answer').text('The correct answer was There\'s a snake in my boot!');
         $('#correct-answer').show();
         $('#woodys-saying').hide();
         $('#woodys-saying-out').show();
-        clearInterval(gameTimer);
+        clearInterval(timer);
         unanswered++;
-        afterQuestionTimer = setInterval(afterWoodysSayingTimer, 1000);
+        timer = setInterval(afterWoodysSayingTimer, 1000);
     }
 }
 
@@ -343,9 +346,9 @@ function dugBreed(){
         $('#counter').hide();
         $('#dug-breed').hide();
         $('#dug-breed-correct').show();
-        clearInterval(gameTimer);
+        clearInterval(timer);
         correct++;
-        afterQuestionTimer = setInterval(afterDugBreedTimer, 1000);
+        timer = setInterval(afterDugBreedTimer, 1000);
     }else if (answer == 'doberman-pinscher'||answer == 'bulldog'||answer == 'rottweiler'){
         $('#title').text('Nope!');
         $('#counter').hide();
@@ -353,9 +356,9 @@ function dugBreed(){
         $('#correct-answer').show();
         $('#dug-breed').hide();
         $('#dug-breed-incorrect').show();
-        clearInterval(gameTimer);
+        clearInterval(timer);
         incorrect++;
-        afterQuestionTimer = setInterval(afterDugBreedTimer, 1000);
+        timer = setInterval(afterDugBreedTimer, 1000);
     }else if (seconds == 0){
         $('#title').text('Out of time!');
         $('#counter').hide();
@@ -363,9 +366,9 @@ function dugBreed(){
         $('#correct-answer').show();
         $('#dug-breed').hide();
         $('#dug-breed-out').show();
-        clearInterval(gameTimer);
+        clearInterval(timer);
         unanswered++;
-        afterQuestionTimer = setInterval(afterDugBreedTimer, 1000);
+        timer = setInterval(afterDugBreedTimer, 1000);
     }
 }
 
@@ -376,9 +379,9 @@ function kevinFood(){
         $('#counter').hide();
         $('#kevin-food').hide();
         $('#kevin-food-correct').show();
-        clearInterval(gameTimer);
+        clearInterval(timer);
         correct++;
-        afterQuestionTimer = setInterval(afterKevinFoodTimer, 1000);
+        timer = setInterval(afterKevinFoodTimer, 1000);
     }else if (answer == 'crackers'||answer == 'granola'||answer == 'chips'){
         $('#title').text('Nope!');
         $('#counter').hide();
@@ -386,9 +389,9 @@ function kevinFood(){
         $('#correct-answer').show();
         $('#kevin-food').hide();
         $('#kevin-food-incorrect').show();
-        clearInterval(gameTimer);
+        clearInterval(timer);
         incorrect++;
-        afterQuestionTimer = setInterval(afterKevinFoodTimer, 1000);
+        timer = setInterval(afterKevinFoodTimer, 1000);
     }else if (seconds == 0){
         $('#title').text('Out of time!');
         $('#counter').hide();
@@ -396,9 +399,9 @@ function kevinFood(){
         $('#correct-answer').show();
         $('#kevin-food').hide();
         $('#kevin-food-out').show();
-        clearInterval(gameTimer);
+        clearInterval(timer);
         unanswered++;
-        afterQuestionTimer = setInterval(afterKevinFoodTimer, 1000);
+        timer = setInterval(afterKevinFoodTimer, 1000);
     }
 }
 
@@ -409,9 +412,9 @@ function monstersPower(){
         $('#counter').hide();
         $('#monsters-power').hide();
         $('#monsters-power-correct').show();
-        clearInterval(gameTimer);
+        clearInterval(timer);
         correct++;
-        afterQuestionTimer = setInterval(afterMonstersPowerTimer, 1000);
+        timer = setInterval(afterMonstersPowerTimer, 1000);
     }else if (answer == 'laughs'||answer == 'crys'||answer == 'whispers'){
         $('#title').text('Nope!');
         $('#counter').hide();
@@ -419,9 +422,9 @@ function monstersPower(){
         $('#correct-answer').show();
         $('#monsters-power').hide();
         $('#monsters-power-incorrect').show();
-        clearInterval(gameTimer);
+        clearInterval(timer);
         incorrect++;
-        afterQuestionTimer = setInterval(afterMonstersPowerTimer, 1000);
+        timer = setInterval(afterMonstersPowerTimer, 1000);
     }else if (seconds == 0){
         $('#title').text('Out of time!');
         $('#counter').hide();
@@ -429,9 +432,9 @@ function monstersPower(){
         $('#correct-answer').show();
         $('#monsters-power').hide();
         $('#monsters-power-out').show();
-        clearInterval(gameTimer);
+        clearInterval(timer);
         unanswered++;
-        afterQuestionTimer = setInterval(afterMonstersPowerTimer, 1000);
+        timer = setInterval(afterMonstersPowerTimer, 1000);
     }
 }
 
@@ -442,9 +445,9 @@ function bugScare(){
         $('#counter').hide();
         $('#bug-scare').hide();
         $('#bug-scare-correct').show();
-        clearInterval(gameTimer);
+        clearInterval(timer);
         correct++;
-        afterQuestionTimer = setInterval(afterBugScareTimer, 1000);
+        timer = setInterval(afterBugScareTimer, 1000);
     }else if (answer == 'frog'||answer == 'spider'||answer == 'mouse'){
         $('#title').text('Nope!');
         $('#counter').hide();
@@ -452,9 +455,9 @@ function bugScare(){
         $('#correct-answer').show();
         $('#bug-scare').hide();
         $('#bug-scare-incorrect').show();
-        clearInterval(gameTimer);
+        clearInterval(timer);
         incorrect++;
-        afterQuestionTimer = setInterval(afterBugScareTimer, 1000);
+        timer = setInterval(afterBugScareTimer, 1000);
     }else if (seconds == 0){
         $('#title').text('Out of time!');
         $('#counter').hide();
@@ -462,9 +465,9 @@ function bugScare(){
         $('#correct-answer').show();
         $('#bug-scare').hide();
         $('#bug-scare-out').show();
-        clearInterval(gameTimer);
+        clearInterval(timer);
         unanswered++;
-        afterQuestionTimer = setInterval(afterBugScareTimer, 1000);
+        timer = setInterval(afterBugScareTimer, 1000);
     }
 }
 
@@ -475,9 +478,9 @@ function nemoGang(){
         $('#counter').hide();
         $('#nemo-gang').hide();
         $('#nemo-gang-correct').show();
-        clearInterval(gameTimer);
+        clearInterval(timer);
         correct++;
-        afterQuestionTimer = setInterval(afterNemoGangTimer, 1000);
+        timer = setInterval(afterNemoGangTimer, 1000);
     }else if (answer == 'bloat'||answer == 'peach'||answer == 'bubbles'){
         $('#title').text('Nope!');
         $('#counter').hide();
@@ -485,9 +488,9 @@ function nemoGang(){
         $('#correct-answer').show();
         $('#nemo-gang').hide();
         $('#nemo-gang-incorrect').show();
-        clearInterval(gameTimer);
+        clearInterval(timer);
         incorrect++;
-        afterQuestionTimer = setInterval(afterNemoGangTimer, 1000);
+        timer = setInterval(afterNemoGangTimer, 1000);
     }else if (seconds == 0){
         $('#title').text('Out of time!');
         $('#counter').hide();
@@ -495,26 +498,37 @@ function nemoGang(){
         $('#correct-answer').show();
         $('#nemo-gang').hide();
         $('#nemo-gang-out').show();
-        clearInterval(gameTimer);
+        clearInterval(timer);
         unanswered++;
-        afterQuestionTimer = setInterval(afterNemoGangTimer, 1000);
+        timer = setInterval(afterNemoGangTimer, 1000);
     }
 }
 
+// End of game display
 function endGame(){
     $('#correct').text('Correct: '+correct)
     $('#incorrect').text('Incorrect: '+incorrect)
     $('#unanswered').text('Unanswered: '+unanswered)
 }
 
+// Restarts the game at the first question
 function tryAgain(){
     correct = 0;
     incorrect = 0;
     unanswered = 0;
-    seconds = 15;
+    document.querySelector('.year-founded').reset();
+    document.querySelector('.first-film').reset();
+    document.querySelector('.woodys-saying').reset();
+    document.querySelector('.dug-breed').reset();
+    document.querySelector('.kevin-food').reset();
+    document.querySelector('.monsters-power').reset();
+    document.querySelector('.bug-scare').reset();
+    document.querySelector('.nemo-gang').reset();
+    $('#correct').text(correct)
+    $('#incorrect').text(incorrect)
+    $('#unanswered').text(unanswered)
     $('#end-game').hide();
     $('#title').text('Pixar Trivia!');
-    $('#counter').show();
     $('#year-founded').show();
-    gameTimer = setInterval(yearFoundedTimer, 1000);
+    timer = setInterval(yearFoundedTimer, 1000);
 }

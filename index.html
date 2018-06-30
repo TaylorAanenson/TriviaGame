@@ -9,6 +9,7 @@
     <title>Pixar Trivia</title>
 </head>
 <body>
+<audio id="game-music" preload="auto" src="assets/sounds/PIXAR Fest Esplanade Area Loop - Disneyland Resort.mp3"></audio>
 <div id="head" class="container">
     <h1 id="title" class="text-center">Pixar Trivia!</h1>
     <button id="start" class="btn btn-warning btn-lg btn-block" onclick="startGame()">START</button>
@@ -18,7 +19,7 @@
 <div id="body" class="container">
     <div id="year-founded" class="text-center">
         <p class="guestion-title">What year was Pixar founded?</p>
-        <form name="year-founded" class="btn-group-vertical btn-group-toggle btn-block" onclick="yearFounded()">
+        <form name="year-founded" class="year-founded btn-group-vertical btn-group-toggle btn-block" onclick="yearFounded()">
             <label class="btn btn-info">
             <input type="radio" name="year-founded" value="1993">1993</input>
             </label>
@@ -50,7 +51,7 @@
     </div>
     <div id="first-film" class="text-center">
         <p class="guestion-title">What was Pixar's first film?</p>
-        <form name="first-film" class="btn-group-vertical btn-group-toggle btn-block" onclick="firstFilm()">
+        <form name="first-film" class="first-film btn-group-vertical btn-group-toggle btn-block" onclick="firstFilm()">
             <label class="btn btn-info">
             <input type="radio" name="first-film" value="a-bugs-life">A Bug's Life</input>
             </label>
@@ -82,7 +83,7 @@
     </div>
     <div id="woodys-saying" class="text-center">
         <p class="guestion-title">In Toy Story, what does Woody say when his string is pulled?</p>
-        <form name="woodys-saying" class="btn-group-vertical btn-group-toggle btn-block" onclick="woodysSaying()">
+        <form name="woodys-saying" class="woodys-saying btn-group-vertical btn-group-toggle btn-block" onclick="woodysSaying()">
             <label class="btn btn-info">
             <input type="radio" name="woodys-saying" value="reach">Reach for the sky!</input>
             </label>
@@ -99,22 +100,22 @@
     </div>
     <div id="woodys-saying-correct" class="text-center">
         <div class="embed-responsive embed-responsive-16by9">
-            <iframe src="https://giphy.com/embed/xcymn33ucu4M0"></iframe>
+            <iframe src="https://giphy.com/embed/8fgwop8fhah9K"></iframe>
         </div>
     </div>
     <div id="woodys-saying-incorrect" class="text-center">
-        <div class="embed-responsive embed-responsive-16by9">   
-            <iframe src="https://giphy.com/embed/140ObFj9MRjRIc"></iframe>
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="https://giphy.com/embed/JiArsyLc3m6Sk"></iframe>
         </div>
     </div>
     <div id="woodys-saying-out" class="text-center">
         <div class="embed-responsive embed-responsive-16by9">
-            <iframe src="https://giphy.com/embed/cPRsE9gIKuATK"></iframe>
+            <iframe src="https://giphy.com/embed/SIHWuV8k4JtE4"></iframe>
         </div>
     </div>
     <div id="dug-breed" class="text-center">
         <p class="guestion-title">What breed of dog is Dug in UP?</p>
-        <form name="dug-breed" class="btn-group-vertical btn-group-toggle btn-block" onclick="dugBreed()">
+        <form name="dug-breed" class="dug-breed btn-group-vertical btn-group-toggle btn-block" onclick="dugBreed()">
             <label class="btn btn-info">
             <input type="radio" name="dug-breed" value="doberman-pinscher">Doberman Pinscher</input>
             </label>
@@ -146,7 +147,7 @@
     </div>
     <div id="kevin-food" class="text-center">
         <p class="guestion-title">What does Russel feed Kevin in UP?</p>
-        <form name="kevin-food" class="btn-group-vertical btn-group-toggle btn-block" onclick="kevinFood()">
+        <form name="kevin-food" class="kevin-food btn-group-vertical btn-group-toggle btn-block" onclick="kevinFood()">
             <label class="btn btn-info">
             <input type="radio" name="kevin-food" value="crackers">Crackers</input>
             </label>
@@ -178,7 +179,7 @@
     </div>
     <div id="monsters-power" class="text-center">
         <p class="guestion-title">What do they collect for power in Monsters, Inc.?</p>
-        <form name="monsters-power" class="btn-group-vertical btn-group-toggle btn-block" onclick="monstersPower()">
+        <form name="monsters-power" class="monsters-power btn-group-vertical btn-group-toggle btn-block" onclick="monstersPower()">
             <label class="btn btn-info">
             <input type="radio" name="monsters-power" value="laughs">Laughs</input>
             </label>
@@ -210,7 +211,7 @@
     </div>
     <div id="bug-scare" class="text-center">
         <p class="guestion-title">In A Bug’s Life, what does Flik construct to scare away the grasshoppers?</p>
-        <form name="bug-scare" class="btn-group-vertical btn-group-toggle btn-block" onclick="bugScare()">
+        <form name="bug-scare" class="bug-scare btn-group-vertical btn-group-toggle btn-block" onclick="bugScare()">
             <label class="btn btn-info">
             <input type="radio" name="bug-scare" value="bird">A Bird</input>
             </label>
@@ -242,7 +243,7 @@
     </div>
     <div id="nemo-gang" class="text-center">
         <p class="guestion-title">Who is the leader of the Tank Gang in Finding Nemo?</p>
-        <form name="nemo-gang" class="btn-group-vertical btn-group-toggle btn-block" onclick="nemoGang()">
+        <form name="nemo-gang" class="nemo-gang btn-group-vertical btn-group-toggle btn-block" onclick="nemoGang()">
             <label class="btn btn-info">
             <input type="radio" name="nemo-gang" value="bloat">Bloat</input>
             </label>

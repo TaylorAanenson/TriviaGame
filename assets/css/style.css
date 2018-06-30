@@ -51,6 +51,10 @@ body {
     #head {
         padding-top: 10px;
     }
+    #correct-answer {
+        font-size: 25px;
+        margin-top: -10px;
+    }
     #title {
         font-size: 50px;
     }
