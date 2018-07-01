@@ -18,7 +18,7 @@ $('#timer').text(seconds)
 
 function yearFoundedTimer(){
     seconds--;
-    $('#timer').text(seconds)
+    $('#timer').text(seconds)   
     if (seconds == 0){
         clearInterval(timer);
         yearFounded();
@@ -524,11 +524,9 @@ function tryAgain(){
     document.querySelector('.monsters-power').reset();
     document.querySelector('.bug-scare').reset();
     document.querySelector('.nemo-gang').reset();
-    $('#correct').text(correct)
-    $('#incorrect').text(incorrect)
-    $('#unanswered').text(unanswered)
     $('#end-game').hide();
     $('#title').text('Pixar Trivia!');
+    $('#counter').show();
     $('#year-founded').show();
     timer = setInterval(yearFoundedTimer, 1000);
 }
